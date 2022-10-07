@@ -7,6 +7,9 @@
     <title>X O X</title>
     <script src="main.js"></script>
     <link rel="styleSheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
 
   </head>
 
@@ -24,12 +27,14 @@
     </div>
 
     <div id="mainContainer">
+      <div id="divStartGame"><p id="pStartGame" onclick="startAnimation(0,20,15)">Start</p></div>
       <div id="gameContainer">
         <div id="blueP" class="player" >
-          <div id="clearBack"></div>
+          <div id="clearRect"></div>
         </div>
-        <div id="redP" class="player" ></div>
+        <div id="redP" class="player"></div>
       </div>
+      <p id="pReplayMessage">[ENTER] to play again</p>
     </div>
   </body>
 </html>

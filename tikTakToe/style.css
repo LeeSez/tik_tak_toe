@@ -62,17 +62,23 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  
+  font-family: 'Comfortaa', cursive;
+  font-weight: 600;
 }
 #gameContainer {
   display: flex;
   flex-flow: row nowrap;
-  margin-top: 7vh;
+  margin-top: 10vh;
+  width:20vw;
+  height:15vh;
+  min-width: 300px;
 }
 .player{
-  width:30vw;
-  height:80vh;
-  min-width: 300px;
-  min-height: 300px;
+  width: 50%;
+  /*min-width: 300px;
+  min-height: 300px;*/
 }
 #blueP{
   background-color: rgba(136, 188, 216,0.3);
@@ -93,7 +99,7 @@ body{
   background-color: rgba(255, 101, 66,1) !important;
 }
 
-#clearBack{
+#clearRect{
   width:35vw;
   aspect-ratio: 1 / 1;
   min-width: 400px;
@@ -101,6 +107,12 @@ body{
   background-color: rgba(255, 255, 255,0.5);
   position: relative;
   left: 50%;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
 
 .square{
@@ -114,14 +126,6 @@ body{
   justify-content: center;
 }
 
-#clearBack{
-  display: flex;
-  flex-flow: row wrap;
-  align-content: space-evenly;
-  justify-content: center;
-  align-items: center;
-}
-
 #gameContainer img{
   width: 80%;
   height: 80%;
@@ -130,4 +134,21 @@ body{
 .rain{
   position: absolute;
   top:5vh;
+}
+
+#pStartGame {
+  font-size: 8vh;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  position: relative;
+  top: 4.5vh;
+}
+#divStartGame{
+  position: absolute;
+}
+
+#pReplayMessage{
+  font-size: 0.7em;
+  color:#2C2C2C;
+  display: none;
 }

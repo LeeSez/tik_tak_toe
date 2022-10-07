@@ -1,4 +1,5 @@
-let clearRect,blueP, redP,mainContainer;
+let clearRect,blueP, redP, mainContainer, gameContainer, divStartGame;
+let pStartGame, pReplayMessage;
 let turn = 0;
 let gameEnded = false;
 let squares = [];
@@ -10,12 +11,39 @@ let blueRGBA = [136,188,216,1], redRGBA = [255,101,66,1];
 
 
 function init(){
-  clearRect = document.getElementById("clearBack");
+  clearRect = document.getElementById("clearRect");
   mainContainer = document.getElementById("mainContainer");
+  gameContainer = document.getElementById("gameContainer");
   redP = document.getElementById("redP");
   blueP = document.getElementById("blueP");
-  blueP.classList.add("blueHighlight");
-  createSquares();
+  pStartGame = document.getElementById("pStartGame");
+  divStartGame = document.getElementById("divStartGame");
+  pReplayMessage = document.getElementById("pReplayMessage");
+  clearRect.style.visibility = "hidden";
+}
+
+function startAnimation(counter,width,height){
+  divStartGame.style.display = "none";
+  
+  gameContainer.style.width = width + "vw";
+  gameContainer.style.height = height + "vh";
+
+  height += 0.65;
+  width += 0.4;
+  counter++;
+  if(counter<100){
+    setTimeout(()=>{
+      startAnimation(counter,width,height);
+    },10);
+  }
+  else{
+    createSquares();
+    setTimeout(()=>{
+      clearRect.style.visibility = "visible";
+      pReplayMessage.style.display = "block";
+      blueP.classList.add("blueHighlight");
+    },500);
+  }
 }
 
 function createSquares(){
