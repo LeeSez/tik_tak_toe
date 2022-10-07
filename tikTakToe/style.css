@@ -1,0 +1,133 @@
+body{
+  margin:0;
+  overflow:hidden;
+}
+#topPanel {
+  width: 100vw;
+  height: 5vh;
+  min-height: 40px;
+  background-color:#2C2C2C;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; 
+
+  position: absolute;
+
+  z-index: 10;
+}
+#topPanel > div{
+  margin-left:0.5vw;
+}
+
+/* styling the x of the logo and the game */ 
+.x{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.xBody{
+  width: 1.5vh;
+  height: 4vh;
+  background-color: white;
+  border-radius: 1vh;
+}
+.xLeanLeft{
+  transform: rotate(45deg);
+  position: relative;
+  left:0.75vh;
+}
+.xLeanRight{
+  transform: rotate(-45deg);
+  position: relative;
+  left:-0.75vh;
+}
+
+/* styling the circle of the logo and the game */
+
+.o{
+  width: 1vh;
+  height: 1vh;
+  background-color: #2C2C2C;
+
+  border-radius: 50%;
+  border: 1.2vh solid white;
+}
+
+
+#mainContainer{
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gameContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 7vh;
+}
+.player{
+  width:30vw;
+  height:80vh;
+  min-width: 300px;
+  min-height: 300px;
+}
+#blueP{
+  background-color: rgba(136, 188, 216,0.3);
+  border-radius: 10vh 0 0 10vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blueHighlight{
+  background-color: rgba(136, 188, 216,1) !important;
+}
+#redP{
+  background-color: rgba(255, 101, 66,0.3);
+  border-radius: 0 10vh 10vh 0;
+}
+.redHighlight{
+  background-color: rgba(255, 101, 66,1) !important;
+}
+
+#clearBack{
+  width:35vw;
+  aspect-ratio: 1 / 1;
+  min-width: 400px;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255,0.5);
+  position: relative;
+  left: 50%;
+}
+
+.square{
+  width: 25%;
+  height: 25%;
+  background-color: white;
+  margin:2%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#clearBack{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameContainer img{
+  width: 80%;
+  height: 80%;
+}
+
+.rain{
+  position: absolute;
+  top:5vh;
+}

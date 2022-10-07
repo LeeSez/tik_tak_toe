@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X O X</title>
+    <script src="main.js"></script>
+    <link rel="styleSheet" href="style.css" />
+
+  </head>
+
+  <body onload="init()">
+    <div id="topPanel">
+      <div class="x">
+        <div class="xBody xLeanLeft"></div>
+        <div class="xBody xLeanRight"></div>
+      </div>
+      <div class="o"></div>
+      <div class="x">
+        <div class="xBody xLeanLeft"></div>
+        <div class="xBody xLeanRight"></div>
+      </div>
+    </div>
+
+    <div id="mainContainer">
+      <div id="gameContainer">
+        <div id="blueP" class="player" >
+          <div id="clearBack"></div>
+        </div>
+        <div id="redP" class="player" ></div>
+      </div>
+    </div>
+  </body>
+</html>
