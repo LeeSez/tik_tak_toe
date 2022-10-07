@@ -1,3 +1,2 @@
-5. add a restart button
 6. add documantation 
 7. add sound effects
