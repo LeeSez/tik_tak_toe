@@ -1,11 +1,15 @@
+/* The code is aaranged according to the html hierarchy */
+
 body{
   margin:0;
   overflow:hidden;
 }
+
 #topPanel {
   width: 100vw;
   height: 5vh;
   min-height: 40px;
+  
   background-color:#2C2C2C;
 
   display: flex;
@@ -21,8 +25,7 @@ body{
   margin-left:0.5vw;
 }
 
-/* styling the x of the logo and the game */ 
-.x{
+.x{ /* styling the x of the logo and the game */ 
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -44,9 +47,7 @@ body{
   left:-0.75vh;
 }
 
-/* styling the circle of the logo and the game */
-
-.o{
+.o{ /* styling the circle of the logo and the game */
   width: 1vh;
   height: 1vh;
   background-color: #2C2C2C;
@@ -55,10 +56,10 @@ body{
   border: 1.2vh solid white;
 }
 
-
 #mainContainer{
   height: 95vh;
   width: 100vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,19 +68,39 @@ body{
   font-family: 'Comfortaa', cursive;
   font-weight: 600;
 }
+
+#pStartGame {
+  position: relative;
+  top: 4.5vh;
+  
+  font-size: 8vh;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  
+  cursor:context-menu;
+}
+#divStartGame{
+  position: absolute;
+}
+
 #gameContainer {
-  display: flex;
-  flex-flow: row nowrap;
-  margin-top: 10vh;
   width:20vw;
   height:15vh;
   min-width: 300px;
+  margin-top: 10vh;
+
+  display: flex;
+  flex-flow: row nowrap;
 }
+#gameContainer img{
+  width: 80%;
+  height: 80%;
+}
+
 .player{
   width: 50%;
-  /*min-width: 300px;
-  min-height: 300px;*/
 }
+
 #blueP{
   background-color: rgba(136, 188, 216,0.3);
   border-radius: 10vh 0 0 10vh;
@@ -91,6 +112,7 @@ body{
 .blueHighlight{
   background-color: rgba(136, 188, 216,1) !important;
 }
+
 #redP{
   background-color: rgba(255, 101, 66,0.3);
   border-radius: 0 10vh 10vh 0;
@@ -104,7 +126,9 @@ body{
   aspect-ratio: 1 / 1;
   min-width: 400px;
   min-height: 400px;
+  
   background-color: rgba(255, 255, 255,0.5);
+  
   position: relative;
   left: 50%;
 
@@ -113,38 +137,21 @@ body{
   align-content: space-evenly;
   justify-content: center;
   align-items: center;
-}
 
+  visibility: hidden;
+}
 .square{
   width: 25%;
   height: 25%;
-  background-color: white;
   margin:2%;
+  
+  background-color: white;
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-#gameContainer img{
-  width: 80%;
-  height: 80%;
-}
-
-.rain{
-  position: absolute;
-  top:5vh;
-}
-
-#pStartGame {
-  font-size: 8vh;
-  font-weight: bold;
-  font-family: 'Comfortaa', cursive;
-  position: relative;
-  top: 4.5vh;
-}
-#divStartGame{
-  position: absolute;
+  cursor: grab;
 }
 
 #pReplayMessage{
@@ -153,6 +160,10 @@ body{
   display: none;
 }
 
+.rain{
+  position: absolute;
+  top:5vh;
+}
 #rainContainer{
   position: absolute;
   top:0;
